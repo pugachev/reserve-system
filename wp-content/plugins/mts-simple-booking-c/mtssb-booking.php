@@ -417,10 +417,10 @@ class MTSSB_Booking {
 	 */
 	public function normalize_booking($post, $count=array()) {
 
-		if (get_magic_quotes_gpc()) {
-			$post = stripslashes_deep($post);
-		}
-
+		// if (get_magic_quotes_gpc()) {
+		// 	$post = stripslashes_deep($post);
+		// }
+		$post = stripslashes_deep($post);
 		$booking = $this->new_booking();
 
 		// 入力データの正規化
